@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../scss/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+    <title>Press</title>
+</head>
+<body>
+    <header>
+        <navbar class="navbar">
+            <div class="container nav">
+                <a href="#" class="nav__logo">Pressa</a>
+     
+
+                <label class="nav__search">
+                    <img class="nav__search__icon" data-search="search" id="searchImg" src="../Img/search.png" alt="">
+                    <input type="search" class="nav__search__input" id="searchInput"  placeholder="Izlash">
+                </label>
+
+                <ul class="nav__list">
+                    <li class="nav__list__item"><a href="about.html" class="nav__list__item__links">Biz haqimizda</a><li>
+                    <li class="nav__list__item"><a href="#about" class="nav__list__item__links">Savol va javoblar</a></li>
+                </ul>    
+                <button class="nav__btn" type="button" id="addEvent">
+                    <img src="../Img/plus.png" alt="add">
+                    <a target="_blank" href="elon.html" class="nav__btn__link">E'lon berish</a>
+                </button>
+            </div>
+        </navbar>
+        <h1 class="container header__desc">Eng so'ngi master klasslar va tadbirlar bizning saytda</h1>
+    </header>
+
+    <main>
+        <section class="container filter">
+                <input type="date" class="select dateInput" id="start" name="trip-start"
+                value="22/12/2022" placeholder="12/12/2022"
+                min="2000-01-01" max="2022-12-31">        
+        
+            <select id="categorySelect" class="selectpicker select multiple data-live-search="true">
+                <option value="" disabled selected> <img src="../Img/bolim.png" alt="bolim"> Bolimni tanlang</option>
+                <h1>IT</h1>
+                <option value="Web dasturlash"> Web dasturlash</option>
+                <option value=""> Mobile dasturlash</option>
+                 Dizayn
+                <option value=" UI/UX dizayn"> UI/UX dizayn</option>
+                <option value="Grafik dizayn"> Grafik dizayn</option>
+                <option value="Menejment"> Menejment</option>
+                <option value="Kredit va audit"> Kredit va audit</option>
+                <option value=" Matematika"> Matematika</option>
+                <option value="Fizika"> Fizika</option>
+              </select>             
+              
+              <select class="selectpicker select" id="typeSel" multiple data-live-search="true">
+                <!-- <option value="" disabled selected> <img src="../Img/bolim.png" alt="bolim"> Online / Offline </option> -->
+                <option selected value="online">Online</option>
+                <option value="offline">Offline</option>
+              </select>
+        
+              <select id="nameSelect" class="selectpicker select multiple data-live-search="true">
+                <option value="" disabled selected> <img src="../Img/bolim.png" alt="bolim"> Ism familya</option>
+              </select>
+             
+              <button class="filter__find"  id="filterBtn">
+                Izlash
+              </button>
+        </section>
+
+        <section class="container">
+            <h2 class="lasts">Oxirgi e'lonlar</h2>
+            <div id="eventsList" class="events">
+
+            </div>
+            <button id="moreBtn" type="button" class="more_btn">Ko'proq ko'rish </button>
+        </section>
+
+        <section class="container ad">
+            <div class="ad__block">
+                <h2 class="ad__block__title">
+                    E'LONLARINGIZNI BIZNI SAYTDA BERING
+                </h2>
+                <img class="ad__block__img" src="../Img/man1.png" alt="man">
+            </div>
+
+            <div class="ad__block">
+                <h2 class="ad__block__title">
+                    ENG SO’NGI MASTER KLASLAR BIZNING SAYTDA
+                </h2>
+                <img class="ad__block__img" src="../Img/man2.png" alt="man">
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container nav">
+            <a href="#" class="nav__logo">Pressa</a>
+
+            <ul class="nav__list">
+                <li class="nav__list__item"><a href="about.html" class="nav__list__item__links">Biz haqimizda</a><li>
+                <li class="nav__list__item"><a href="#about" class="nav__list__item__links">Savol va javoblar</a></li>
+            </ul> 
+
+            <a href="tel:+71 200-11-02" class="nav__call">
+                <img src="../Img/call.png" alt="">
+                +71 200-11-02
+            </a>
+            <ul class="nav__social">
+                <a href="https://www.facebook.com/" class="nav__social__link"> 
+                    <img src="../Img/facebook.png" alt="facebook">
+                </a>
+                <a href="https://www.instagram.com/" class="nav__social__link"> 
+                    <img src="../Img/instagram.png" alt="facebook">
+                </a>
+                <a href="https://xn--80affa3aj0al.xn--80asehdb/" class="nav__social__link"> 
+                    <img src="../Img/telegram.png" alt="facebook">
+                </a>
+            </ul>
+    </footer>
+    
+    <template id="eventTemplate">
+        <div id="events__card" class="events__card">
+            <img src="../Img/alisher.png" id="eventImg" class="eventImg" alt="event">
+            <h3 id="eventTitle" class="events__card__title">Alisher Isaevdan biznes va IT bo'yicha master klass </h3>
+            <div class="card__desc">
+                <div class="card__desc__block">
+                    <img src="../Img/user.png" alt="user">
+                    <h4 id="evSpeker" class="card__desc__block__text"> Alisher Isaev</h4>
+                </div>
+
+                <div class="card__desc__block">
+                    <img src="../Img/calendar.png" alt="user">
+                    <h4 id="evDate" class="card__desc__block__text"> 17 / 01 / 2022</h4>
+                </div>
+
+                <div class="card__desc__block">
+                    <img id="typeImg" src="../Img/online.png" alt="user">
+                    <h4 id="evType" class="card__desc__block__text"> Online</h4>
+                </div>
+
+                <div class="card__desc__block">
+                    <img src="../Img/bizness.png" alt="user">
+                    <h4 id="evJob" class="card__desc__block__text">Tadbirkor </h4>
+                </div>
+
+                <div class="card__desc__block">
+                    <img src="../Img/clock.png" alt="user">
+                    <h4 id="evTime" class="card__desc__block__text">15:00 </h4>
+                </div>
+
+                <div class="card__desc__block">
+                    <img src="../Img/views.png" alt="user">
+                    <h4 id="evViews" class="card__desc__block__text">2550 </h4>
+                </div>
+            </div>
+        </div>  
+    </template>
+
+</body>
+<script src="../js/main.js"> </script>
+<script src="http://www.datejs.com/build/date.js" type="text/javascript"></script>
+</html>

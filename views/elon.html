@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../scss/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link href="multiselect.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+    <title>Press</title>
+</head>
+<body>
+    
+    <div class="newEvent" id="newEvent" >
+        <div class="container ">
+            <a href="index.html" class="home">
+                <img src="../Img/House.png" alt="home">
+                <h3 class="home__name">Elon berish</h3>
+            </a>       
+        </div>
+    
+        <section class="container elon">    
+            <div class="elon__block">
+                <h1 class="elon__block__title">Bo'lim tanglang</h1>
+                <select id="categorySelect" class="selectpicker elon__block__select " multiple data-live-search="true">
+                    <option selected value="Dasturlash"> Dasturlash</option>
+                    <option value=" Dizayn">Dizayn</option>
+                    <option value="Biznes"> Biznes</option>
+                    <option value="Talim"> Talim</option>
+                  </select>
+            </div>   
+            <div class="elon__block">
+                <h1 class="elon__block__title">Yo'nalishni tanglang</h1>
+                <select id="subcategorySelect" class="selectpicker elon__block__select select multiple data-live-search="true">
+                    <option selected value="Web dasturlash"> Web dasturlash</option>
+                    <option value="Mobile dasturlash"> Mobile dasturlash</option>
+                    <option value=" UI/UX dizayn"> UI/UX dizayn</option>
+                    <option value="Grafik dizayn"> Grafik dizayn</option>
+                    <option value="Menejment"> Menejment</option>
+                    <option value="Kredit va audit"> Kredit va audit</option>
+                    <option value=" Matematika"> Matematika</option>
+                    <option value="Fizika"> Fizika</option>
+                  </select>
+            </div>   
+            <div class="elon__block">
+                <h1 class="elon__block__title">Offline/ Online</h1>
+                <select id="typeSelect" class="selectpicker elon__block__select" multiple data-live-search="true">
+                    <option selected value="online">Online</option>
+                    <option value="offline">Offline</option>
+                  </select>
+            </div>
+            <div class="elon__block">
+                <h1 class="elon__block__title">Kun</h1>
+                <input  class="elon__block__select dateInput" type="date" id="today" name="trip-start"
+                value="2022-07-31"
+                min="2022-30-21" max="2055-12-31">  
+            </div>
+            <div class="elon__block">
+                <h1 class="elon__block__title">Soat</h1>
+                <input class="elon__block__select timeInput" type="time" id="today" name="trip-start"
+                value="14:00">  
+            </div>
+        </section>
+       <div class="container place">
+            <div class="place__block">
+                <h3 class="place__block__title">Online  bo'ladigan platforma manzilini kiriting</h3>
+                <input id="linkInput" type="text" placeholder="https://www..." class="place__block__link">
+            </div>
+            <div class="place__block">
+                <h3 class="place__block__title">Google yoki Yandex karta manzilini kiriting</h3>
+                <input id="placeInput" type="text" placeholder="https://goo.gl/maps..." class="place__block__link">
+            </div>
+       </div>
+       
+       <div class="container addTitle addTitle1">
+            <h1>Sarlavha kiriting</h1>
+            <input id="titleInput" class="addTitle__title" required type="text" placeholder="Alisher Isayevdan Biznes va IT bo'yicha master klass">
+       </div>
+          
+       <div class="container addTitle">
+           <div class="addTitle__block">
+                <h1>Event haqida to'liq ma'lumot</h1>
+                <textarea id="descInput" class="addTitle__desc" cols="30" rows="10" placeholder="Text"></textarea>
+           </div>
+           <input type="file"  id="imgInput" placeholder="image" class="addTitle__image">
+        </div>
+    
+        <div class="container men">
+            <div class="men__shaxs">
+                <input id="jisInput" type="radio" id="shaxs" name="contact" value="Jismoniy shaxs">
+                <label for="jisInput">Jismoniy shaxs</label>
+                <input id="yurInput" type="radio" id="shaxs2" name="contact" value="Yuridik shaxs">
+                <label for="yurInput">Yuridik shaxs</label>
+            </div>
+            <div class="form">
+                <div class="form__block">
+                    <h3 class="form__block__name">Ismi sharifi</h3>
+                    <input id="nameInput" type="text" class="form__block__input" placeholder="Aziz Azizov">
+                </div>
+                <div class="form__block">
+                    <h3 class="form__block__name">Professiya</h3>
+                    <input id="jobInput" type="text" class="form__block__input" placeholder="Product designer">
+                </div>
+                <div class="form__block">
+                    <h3 class="form__block__name">Telefon raqami</h3>
+                    <input id="tel1Input" type="text" class="form__block__input" placeholder="+998">
+                </div>
+                <div class="form__block">
+                    <h3 class="form__block__name">Qo’shimcha tel raqam</h3>
+                    <input id="tel2Input" type="text" class="form__block__input" placeholder="+998">
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="send">
+            <button class="send__btn" id="sendBtn"> Yuborish</button>
+            <a href="elon.html" class="send__delete"> Bekor qilish</a>
+        </div>
+    
+    
+    
+        <footer class="footer">
+            <div class="container nav">
+                <a  href="#" class="nav__logo">Pressa</a>
+    
+                <ul class="nav__list">
+                    <li class="nav__list__item"><a href="about.html" class="nav__list__item__links">Biz haqimizda</a><li>
+                    <li class="nav__list__item"><a href="#about" class="nav__list__item__links">Savol va javoblar</a></li>
+                </ul> 
+    
+                <a href="tel:+71 200-11-02" class="nav__call">
+                    <img src="../Img/call.png" alt="">
+                    +71 200-11-02
+                </a>
+                <ul class="nav__social">
+                    <a href="https://www.facebook.com/" class="nav__social__link"> 
+                        <img src="../Img/facebook.png" alt="facebook">
+                    </a>
+                    <a href="https://www.instagram.com/" class="nav__social__link"> 
+                        <img src="../Img/instagram.png" alt="facebook">
+                    </a>
+                    <a href="https://xn--80affa3aj0al.xn--80asehdb/" class="nav__social__link"> 
+                        <img src="../Img/telegram.png" alt="facebook">
+                    </a>
+                </ul>
+        </footer>
+    </div>
+    
+    <div id="xabar" class="xabar">
+        <div class="message">
+            <h2 class="message__title">Sizning e'loningiz yuborildi</h2>        
+            <p  class="message__text">
+                Yaqin soatlar ichda admin tomonidan tekshirib chiqladi va saytda e'lon qilinadi!
+            </p>
+            <button id="message__ok" class="message__ok"> OK </button>
+            <a class="message__back">
+                <img  src="../Img/back.png" alt="back">
+            </a>
+
+        </div>
+    </div>
+
+</body>
+<script src="../js/elon.js"></script>
+</html>

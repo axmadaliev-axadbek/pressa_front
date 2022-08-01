@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../scss/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Press</title>
+</head>
+<body>
+    <div class="container admin">
+        <div class=" sidebar">
+            <a target="_blank" href ="#" class="sidebar__logo">Pressa</a>
+            <div class="sidebar__menu">
+                <a target="_blank" href="index.html" class="sidebar__menu__block">
+                    <img src="../Img/home.svg" alt="home">
+                    Bosh sahifa
+                </a>
+                <a href="index.html" class="sidebar__menu__block">
+                    <img src="../Img/presentation.svg" alt="home">
+                    Statistika
+                </a>
+                <a id="deletedBtn"  href="#" class="sidebar__menu__block">
+                    <img src="../Img/trash.svg" alt="home">
+                    O'chirilganlar
+                </a>
+                <a href="#" class="sidebar__menu__block">
+                    <img src="../Img/setting.svg" alt="home">
+                    Sozlamalar
+                </a>
+                <a href="login.html" id="quitBtn" class="sidebar__menu__block">
+                    <img src="../Img/arrow.svg" alt="home">
+                    Chiqish
+                </a>
+            </div>
+            <h4 class="sidebar__year">2022 All Rights</h4>
+        </div>
+
+        <div class="main">
+            <div class="main__nav">
+                <label class="main__nav__search">
+                    <img id="searchImg" src="../Img/search2.png" alt="search">
+                    <input id="searchInput" type="text" class="main__nav__search__input">
+                </label>
+                <img src="../Img/bell.png" alt="bell">
+                <div class="main__nav__admin">
+                    <img class="userImg" src="../Img/user1.png" alt="">
+                    <div class="main__nav__admin__block">
+                        <h2 id="adminName" class="main__nav__admin__block__name"> Abbos Janizakov</h2>
+                        <h2 id="adminId" class="main__nav__admin__block__id"> id <span class="admin__id">16515 </span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="filter">
+                <button id="pendigsPostsBtn" class="filter__btn" >Kutilmoqda</button>
+                <button id="confirmedPostsBtn" class="filter__btn" >Qabul qiligan </button>
+                <button id="canceledsPostsBtn" class="filter__btn" >Rad etilgan</button>
+            </div>
+            <h4 class="container events__title">Eng so'ngi xabarnomalar</h4>
+            <div id="eventsList" class="events2">
+
+            </div>
+        </div>
+    </div>
+
+    <template id="cardTemplate">
+        <div class="cards">
+                    <div class="cards__main">
+                        <h4 id="eventTitle" class="cards__main__title"> Ux Ui dan masterklass o'tkazib yubormang Yoshlar telekanalida</h4>
+                        <div class="cards__main__btn">
+                            <button id="eventBtnDelay" date-send = 'DELAY' type="submit" class="cards__main__btn__delay"> Bekor qilish</button>
+                            <button id="eventBtnOk" data-delay = 'OK' type="submit"  class="cards__main__btn__submit"> Tasdiqlash</button>
+                        </div>
+                    </div>
+                    <div class="cards__info">
+                        <h4 id="eventUser" class="cards__info__user">Abbos Janizakov</h4>
+                        <h4  id="eventTel" class="cards__info__date">+998 90 123-45-67</h4>
+                        <h4  id="eventDate" class="cards__info__date">30/01/2022</h4>
+                        <h4  id="eventTime" class="cards__info__date">15:00</h4>
+                        <h4 id="eventSoxa" class="cards__info__date">UI/UX dizayner</h4>
+                    </div>
+                </div>
+    </template>
+</body>
+<script src="../js/admin.js"></script>
+</html>

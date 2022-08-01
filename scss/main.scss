@@ -1,0 +1,52 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    // margin-bottom: 100px;
+}
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
+.container{
+    max-width: 1250px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+.nav__btn__link {
+    text-decoration: none
+}
+
+@import "./header";
+@import "./content";
+@import "./footer";
+@import "./admin";
+@import "./singleevent";
+@import "./elon";
+@import "./login";
