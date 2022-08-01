@@ -1,0 +1,1 @@
+window.location.replace('./views/index.html')
